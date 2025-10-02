@@ -1,3 +1,48 @@
+
+
+# Flutter & Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# iOS / Xcode
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/.symlinks/
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/DerivedData/
+
+# Android
+android/.gradle/
+android/app/build/
+*.keystore
+
+# Generated Dart files
+*.g.dart
+*.freezed.dart
+*.config.dart
+*.injectable.dart
+
+# JSON serialization / Hive / Drift / etc.
+*.mocks.dart
+*.gr.dart
+
+# Others
+*.log
+
+
+
 # Miscellaneous
 *.class
 *.log
