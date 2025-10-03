@@ -1,5 +1,5 @@
 class NetworkEndpoint {
 
 
-  static const getRandomUser = 'https://randomuser.me/api' ; 
+  static const getRandomUser = 'api' ; 
 }
