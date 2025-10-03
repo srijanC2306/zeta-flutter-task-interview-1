@@ -96,7 +96,7 @@ class _CardBox extends StatelessWidget {
         duration: const Duration(milliseconds: 500),
         curve: Curves.easeInOut,
         width: isCardTapped.value ? size.width : size.width * 0.6,
-        height: isCardTapped.value ? size.height * 0.6 : size.height * 0.4,
+        height: isCardTapped.value ? size.height * 0.4 : size.height * 0.2,
         margin: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: Colors.red,
