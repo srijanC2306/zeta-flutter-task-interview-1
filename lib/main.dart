@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test_cases/injectable/injectable.dart';
+import 'package:flutter_test_cases/zeta_interview/presentation/cubit/get_recent_transaction_cubit.dart';
 import 'package:flutter_test_cases/zeta_interview/presentation/ui/home_page.dart';
+import 'package:get_it/get_it.dart';
 
-void main() async{
-
-
-  await injectableDependencies('dev'); 
+void main() async {
+  await injectableDependencies('dev');
   runApp(const MyApp());
 }
 
@@ -44,8 +45,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,11 +53,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text(widget.title),
       ),
-      body: HomePage(),
+      body: BlocProvider(
+        create: (context) => GetIt.instance<GetRecentTransactionCubit>(),
+        child: HomePage(),
+      ),
     );
   }
 }
-
-
-
-

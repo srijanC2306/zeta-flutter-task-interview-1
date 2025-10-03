@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_test_cases/zeta_interview/data/interceptor/server_error_interceptor.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 const _timeOut = Duration(minutes: 1);
 
@@ -42,5 +43,13 @@ void registerInterceptor() {
 
   dio.interceptors.clear();
 
-  dio.interceptors.addAll([ServerErrorInterceptor()]);
+  dio.interceptors.addAll([
+    ServerErrorInterceptor(),
+    PrettyDioLogger(
+      requestHeader: true,
+      requestBody: true,
+      responseBody: true,
+      compact: false,
+    ),
+  ]);
 }

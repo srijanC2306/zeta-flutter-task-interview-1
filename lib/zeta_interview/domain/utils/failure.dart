@@ -7,10 +7,15 @@ part 'failure.freezed.dart';
 class Failure with _$Failure {
   const factory Failure({String? content, ApiResponseCodes? responseCode}) =
       _Failure;
+      
+        @override
+        // TODO: implement content
+        String? get content => throw UnimplementedError();
+      
+        @override
+        // TODO: implement responseCode
+        ApiResponseCodes? get responseCode => throw UnimplementedError();
 
-  @override
-  String? get content => content;
 
-  @override
-  ApiResponseCodes? get responseCode => responseCode ;
+
 }
